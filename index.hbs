@@ -1,0 +1,25 @@
+{{!< default}}
+
+{{! The main content area on the homepage }}
+
+<div class="row {{#if @blog.cover}}margintop{{/if}}">
+   <div class="small-12 large-9 columns">
+
+    {{#foreach posts}}
+      {{> content-post}}  
+    {{/foreach}}
+
+
+    </div>
+
+    <div class="small-12 large-3 columns">
+    {{> sidebar}}
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+    {{pagination}}
+     </div>
+    </div>
